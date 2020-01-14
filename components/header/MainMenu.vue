@@ -1,7 +1,9 @@
 <template>
     <ul class="flex justify-between w-full">
         <li>
-            <nuxt-link to="/" exact active-class="active">Главная</nuxt-link>
+            <nuxt-link to="/" exact active-class="active py-4"
+                >Главная</nuxt-link
+            >
         </li>
         <li>
             <nuxt-link to="/about" active-class="active">О нас</nuxt-link>

@@ -18,6 +18,7 @@
                 :src="tinyImgSrc"
                 @load="tinyLoaded"
             />
+
             <picture>
                 <source
                     type="image/webp"
@@ -39,7 +40,7 @@
 </template>
 
 <script>
-import { basename } from '../../util/basename';
+import { basename } from '../../utils/basename';
 
 const sizes = [640, 768, 1024, 1366, 1600, 1920];
 
@@ -48,6 +49,16 @@ export default {
         url: {
             type: String,
             required: true
+        },
+        // Если ссылка является любой внешней кроме нашего сервера и локальных изображений
+        isExternal: {
+            type: Boolean,
+            default: false
+        },
+        // Если ссылка идет с нашего сервера где хранятся оптимизированные изображения
+        isFromServer: {
+            type: Boolean,
+            default: false
         },
         type: {
             type: String,
@@ -68,21 +79,34 @@ export default {
     },
     computed: {
         dev() {
-            // process.env.dev указан в nuxt config js, проверяю код на development или продакш, дополняю еще одну переменную
+            // process.env.dev указан в nuxt config js, проверяю код на development или продакшн, дополняю еще одну переменную
             // для того чтобы имитировать продакшн
             return !!(process.env.dev && !this.fakeProduction);
         },
         pathToImg() {
+            // Если изображение с сервера, то путь брать из env в nuxt config js
+            if (this.isFromServer) {
+                return process.env.pathToServerImages;
+            }
+
+            // иначе взять локальные данные
             return this.dev ? 'images' : 'images-opt';
         },
         tinyImgSrc() {
-            return this.dev
-                ? `${this.pathToImg}/${this.url}`
-                : `${this.pathToImg}/100/${this.url}`;
+            // Если ссылка внешняя то вернуть полный путь
+            if (this.isExternal) {
+                return this.url;
+            }
+
+            return this.dev && !this.isFromServer
+                ? ${this.pathToImg}/${this.url}
+                : ${this.pathToImg}/100/${this.url};
         },
         originalImgSrc() {
-            return `images/${this.url}`;
+            // Если ссылка внешняя то вернуть полный путь , иначе взять локальный файл
+            return this.isExternal ? this.url : images/${this.url};
         },
+        // название файла
         filename() {
             return basename(this.url);
         },
@@ -93,13 +117,17 @@ export default {
         // Набор классов для картинов внутри picture, вывел отдельно так как они повторяются
         originalImgClasses() {
             return [
-                `all-full lazy-image object-fit-polyfill 
+                `all-full lazy-image object-fit-polyfill
                     transition-original-image opacity-0`,
                 { 'opacity-100': this.isOriginalLoaded }
             ];
         }
     },
-    mounted() {},
+    created() {
+        if (this.isFromServer && this.isExternal) {
+       throw new Error('isFromServer and isExternal are true');
+        }
+    },
     methods: {
         tinyLoaded() {
             this.isTinyLoaded = true;
@@ -108,18 +136,18 @@ export default {
             this.isOriginalLoaded = true;
         },
         originalImgSrcset(type) {
-            if (this.dev) {
+            if (this.dev || this.isExternal) {
                 return this.originalImgSrc;
             }
 
             // srcset должен быть динамичным и держать себе размеры которые указаны в массиве sizes
             // пример тут https://developer.mozilla.org/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
             const generateSrcSetArr = sizes.map((size) => {
-                // Для того чтобы картинки не постоянно кэшировались
+                // Для того чтобы картинки не кэшировались
                 const date = Date.now();
-                const path = `${this.pathToImg}/${size}/${this.filename}.${type}?v=${date}`;
+                const path = ${this.pathToImg}/${size}/${this.filename}.${type}?v=${date};
 
-                return `${path} ${size}w`;
+                return ${path} ${size}w;
             });
 
             return generateSrcSetArr.join(',');

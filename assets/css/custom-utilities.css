@@ -9,7 +9,7 @@
 }
 
 .vue-notification {
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 
 .w-1400 {
@@ -21,10 +21,26 @@
 }
 
 .button--linear {
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 18px;
     background: linear-gradient(246.49deg, rgba(255, 255, 255, 0) -8.21%, rgba(255, 255, 255, 0.22) 47.57%, rgba(255, 255, 255, 0) 119.13%), radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(103, 219, 255, 0.2) 100%);
     border: 1px solid rgba(255, 255, 255, 0.33);
     box-sizing: border-box;
     border-radius: 46px;
     padding: 10px 50px;
+}
+
+.ghost {
+  animation: ghost 2.5s ease-in-out infinite both;
+  @keyframes ghost {
+      0% {
+        transform: translateY(20px);
+      }
+      50% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(20px);
+      }
+  }
 }

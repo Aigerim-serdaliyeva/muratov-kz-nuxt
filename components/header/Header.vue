@@ -1,5 +1,5 @@
 <template>
-    <div class="header font-roboto">
+    <div class="header w-full hidden font-roboto lg:block lg:fixed">
         <div class="w-1400 mx-auto flex items-center justify-between">
             <nuxt-link to="/" class="">
                 <img src="@/assets/img/logo.svg" alt="" />
