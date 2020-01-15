@@ -23,14 +23,20 @@ module.exports = {
         'main-yellow': '#FFDC0A'
       },
       spacing: {
+        '1400px': '1400px',
         '870px': '870px',
         '400px': '400px',
+        '450px': '450px',
         '300px': '300px',
+        '170px': '170px',
         '87px': '87px',
         '16px': '16px',
         '14px': '14px',
         '30%': '30%',
         '33%': '33%'
+      },
+      maxWidth: {
+        '1280px': '1280px'
       }
     }
   },

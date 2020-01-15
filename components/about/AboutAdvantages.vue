@@ -1,0 +1,137 @@
+<template>
+    <div class="about-advantage w-full h-full text-white bg-center bg-cover">
+        <div class="container-1600 lg:flex">
+            <div
+                class="about-advantage__title relative w-full h-full py-12 px-4 lg:max-w-3xl  lg:flex-grow"
+            >
+                <h2 class="font-roboto font-black uppercase">
+                    <span class="text-6xl ">НАШИ </span> <br />
+                    ПРЕИМУЩЕСТВА
+                </h2>
+                <img
+                    src="../../assets/img/advantage-arrow.svg"
+                    class="absolute"
+                />
+            </div>
+            <div
+                class="about-advantage__content bg-right bg-cover py-12 lg:py-16 lg:ml-8"
+            >
+                <div
+                    v-for="advantage in advantages"
+                    :key="advantage.title"
+                    class="advantage text-center mb-8 last:mb-0 lg:flex lg:text-left"
+                >
+                    <div
+                        class="advantage__img flex-shrink-0 mb-4 last:mb-0 lg:mr-8"
+                    >
+                        <img :src="advantage.url" class="mx-auto" />
+                    </div>
+                    <div class="advantage__block">
+                        <h3 class="font-bold">{{ advantage.title }}</h3>
+                        <p class="text-sm">{{ advantage.text }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            advantages: [
+                {
+                    url: require('@/assets/img/advantage-1.png'),
+                    title: 'Индивидуальный подход к клиенту',
+                    text:
+                        'Проблемы клиента должны быть решены наилучшим образом со строгим соблюдением требований закона'
+                },
+                {
+                    url: require('@/assets/img/advantage-2.png'),
+                    title: 'Лояльность и конфиденциальность',
+                    text:
+                        'В работе мы всегда стремимся создать долговременные партнерские отношения с клиентами и гарантируем строгую конфиденциальность на всех этапах сотрудничества'
+                },
+                {
+                    url: require('@/assets/img/advantage-3.png'),
+                    title: 'Актуальность методов работы',
+                    text:
+                        'В условиях динамичного рынка и изменчивого законодательства мы прилагаем все усилия, чтобы учитывать эти изменения в своей практике'
+                },
+                {
+                    url: require('@/assets/img/advantage-4.png'),
+                    title: 'Стратегический подход',
+                    text:
+                        'Прежде чем приступить к делу, наши юристы тщательно изучают все законодательство и документы по вопросу клиента, разрабатывают верную стратегию и четкий план дальнейших действий, который оперативно корректируется по мере необходимости'
+                },
+                {
+                    url: require('@/assets/img/advantage-5.png'),
+                    title: 'Надежность',
+                    text:
+                        'Надежность и последовательность – неотъемлемые черты нашего бизнеса. Мы не бросаем клиента и всегда доводим дело до конца'
+                }
+            ]
+        };
+    }
+};
+</script>
+
+<style lang="scss" scoped>
+.about-advantage {
+    background-image: url('../../static/images/about-advantage-back.jpg');
+    &__title {
+        background: rgba(0, 48, 91, 0.76);
+        mix-blend-mode: normal;
+        box-shadow: 13px 4px 23px rgba(0, 0, 0, 0.3);
+        &::before {
+            position: absolute;
+            content: '';
+            background: rgba(0, 48, 91, 0.76);
+            top: 0;
+            right: 100%;
+            bottom: 0;
+            left: -1000px;
+        }
+        h2 {
+            font-size: 61px;
+            span {
+                font-size: 170px;
+                line-height: 80%;
+            }
+        }
+        img {
+            position: absolute;
+            left: -150px;
+            top: 350px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-advantage {
+        background-image: none;
+        &__title {
+            background: rgba(0, 48, 91, 1);
+            h2 {
+                font-size: 28px;
+                span {
+                    font-size: 80px;
+                    line-height: 60%;
+                }
+            }
+            img {
+                transform: rotate(90deg);
+                height: 80px;
+                width: 280px;
+                left: 50%;
+                top: 0;
+            }
+        }
+        &__content {
+            background-color: rgba(0, 48, 91, 0.4);
+            background-image: url('../../assets/img/about-advantage-mob.jpg');
+        }
+    }
+}
+</style>

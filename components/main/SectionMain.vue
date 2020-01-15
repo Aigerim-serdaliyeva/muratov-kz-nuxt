@@ -1,6 +1,6 @@
 <template>
     <div
-        class="main w-full h-screen font-roboto text-white bg-center bg-no-repeat bg-cover lg:h-auto lg:bg-bottom"
+        class="main w-full h-screen font-open-sans text-white bg-center bg-no-repeat bg-cover lg:h-auto lg:bg-bottom"
     >
         <div
             class="main__block w-full h-full px-0 pt-48 pb-8 text-center lg:max-w-4xl lg:pt-64 lg:pb-24 lg:h-auto"

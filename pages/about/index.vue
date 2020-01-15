@@ -1,9 +1,18 @@
 <template>
-    <div class="font-roboto">About</div>
+    <div class="about font-open-sans text-00305B">
+        <AboutMission />
+        <AboutPrinciples />
+        <AboutAdvantages />
+    </div>
 </template>
 
 <script>
-export default {};
+import AboutAdvantages from '../../components/about/AboutAdvantages.vue';
+import AboutPrinciples from '../../components/about/AboutPrinciples.vue';
+import AboutMission from '../../components/about/AboutMission.vue';
+export default {
+    components: { AboutMission, AboutPrinciples, AboutAdvantages }
+};
 </script>
 
 <style lang="scss" scoped></style>
