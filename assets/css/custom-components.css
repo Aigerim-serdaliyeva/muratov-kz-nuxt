@@ -2,4 +2,13 @@
     @apply h-full w-full;
 }
 
+.section-title {
+  @apply font-open-sans font-extrabold text-white bg-blue-back shadow-title text-24px text-center py-4 px-3
 
+}
+
+@screen lg {
+  .section-title {
+    @apply text-40px py-6
+  }
+}

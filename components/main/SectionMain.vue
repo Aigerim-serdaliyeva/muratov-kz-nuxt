@@ -2,30 +2,35 @@
     <div
         class="main w-full h-screen font-open-sans text-white bg-center bg-no-repeat bg-cover lg:h-auto lg:bg-bottom"
     >
-        <div
-            class="main__block w-full h-full px-0 pt-48 pb-8 text-center lg:max-w-4xl lg:pt-64 lg:pb-24 lg:h-auto"
-        >
+        <div class="container-1550">
             <div
-                class="main__title w-full justify-between items-center lg:flex lg:mx-auto lg:max-w-3xl"
+                class="main__block w-full h-full relative before-blue px-0 pt-48 pb-8 text-center lg:max-w-3xl lg:pt-64 lg:pb-24 lg:h-auto"
             >
-                <img
-                    src="@/assets/img/logo-white.svg"
-                    class="block mx-auto lg:mx-0"
-                />
-                <h2
-                    class="font-open-sans font-extrabold font-bold mt-12 lg:mt-0"
+                <div
+                    class="main__title w-full justify-between items-center lg:flex lg:mx-auto lg:max-w-3xl"
                 >
-                    MURATOV PARTNERS
-                </h2>
+                    <img
+                        src="@/assets/img/logo-white.svg"
+                        class="block mx-auto lg:mx-0"
+                    />
+                    <h2
+                        class="font-open-sans font-extrabold font-bold mt-12 lg:mt-0"
+                    >
+                        MURATOV PARTNERS
+                    </h2>
+                </div>
+                <div
+                    class="main__text font-normal text-lg mb-8 lg:text-30px lg:mb-32"
+                >
+                    Защита вашего бизнеса – наш приоритет!
+                </div>
+                <button
+                    class="button button--linear text-18px lg:text-24px"
+                    @click="openForm()"
+                >
+                    Получить консультацию
+                </button>
             </div>
-            <div
-                class="main__text font-normal text-lg mb-8 lg:text-4xl lg:mb-32"
-            >
-                Защита вашего бизнеса – наш приоритет!
-            </div>
-            <button class="button button--linear text-16px" @click="openForm()">
-                Получить консультацию
-            </button>
         </div>
     </div>
 </template>
@@ -42,7 +47,7 @@ export default {
 .main {
     background-image: url('../../static/images/main-back.jpg');
     &__block {
-        background: rgba(1, 33, 63, 0.8);
+        background: rgba(0, 48, 91, 0.76);
         // padding: 260px 0 165px;
         // max-width: 870px;
         // text-align: center;

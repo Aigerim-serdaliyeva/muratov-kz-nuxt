@@ -9,20 +9,22 @@
             </h2>
         </div>
         <div class="about-mission__content py-12 px-3">
-            <h2
-                class="font-extrabold text-lg mb-8 text-center lg:text-3xl lg:text-xl"
-            >
-                Наши корпоративные ценности:
-            </h2>
-            <div
-                v-for="mission in missions"
-                :key="mission.title"
-                class="mission text-center mb-10"
-            >
-                <h3 class="font-bold text-xl mb-4 leading-loose	">
-                    {{ mission.title }}
-                </h3>
-                <p class="text-lg">{{ mission.text }}</p>
+            <div class="container-1550">
+                <h2
+                    class="font-extrabold text-lg mb-8 text-center lg:text-3xl lg:text-xl"
+                >
+                    Наши корпоративные ценности:
+                </h2>
+                <div
+                    v-for="mission in missions"
+                    :key="mission.title"
+                    class="mission text-center mb-10"
+                >
+                    <h3 class="font-bold text-xl mb-4 leading-loose	">
+                        {{ mission.title }}
+                    </h3>
+                    <p class="text-lg">{{ mission.text }}</p>
+                </div>
             </div>
         </div>
     </div>

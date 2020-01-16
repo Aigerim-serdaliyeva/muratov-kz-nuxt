@@ -1,8 +1,8 @@
 <template>
     <div class="about-advantage w-full h-full text-white bg-center bg-cover">
-        <div class="container-1600 lg:flex">
+        <div class="container-1550 lg:flex">
             <div
-                class="about-advantage__title relative w-full h-full py-12 px-4 lg:max-w-3xl  lg:flex-grow"
+                class="about-advantage__title blue-rgba relative before-blue w-full h-full py-12 px-4 lg:max-w-3xl  lg:flex-grow"
             >
                 <h2 class="font-roboto font-black uppercase">
                     <span class="text-6xl ">НАШИ </span> <br />
@@ -14,7 +14,7 @@
                 />
             </div>
             <div
-                class="about-advantage__content bg-right bg-cover py-12 lg:py-16 lg:ml-8"
+                class="about-advantage__content relative bg-right bg-cover px-3 py-12 lg:py-16 lg:ml-8"
             >
                 <div
                     v-for="advantage in advantages"
@@ -81,18 +81,7 @@ export default {
 .about-advantage {
     background-image: url('../../static/images/about-advantage-back.jpg');
     &__title {
-        background: rgba(0, 48, 91, 0.76);
-        mix-blend-mode: normal;
         box-shadow: 13px 4px 23px rgba(0, 0, 0, 0.3);
-        &::before {
-            position: absolute;
-            content: '';
-            background: rgba(0, 48, 91, 0.76);
-            top: 0;
-            right: 100%;
-            bottom: 0;
-            left: -1000px;
-        }
         h2 {
             font-size: 61px;
             span {
@@ -102,7 +91,7 @@ export default {
         }
         img {
             position: absolute;
-            left: -150px;
+            left: -180px;
             top: 350px;
         }
     }
@@ -125,12 +114,22 @@ export default {
                 height: 80px;
                 width: 280px;
                 left: 50%;
-                top: 0;
+                top: 49.8%;
             }
         }
         &__content {
-            background-color: rgba(0, 48, 91, 0.4);
             background-image: url('../../assets/img/about-advantage-mob.jpg');
+            z-index: -2;
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: rgba(0, 48, 91, 0.5);
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+            }
         }
     }
 }

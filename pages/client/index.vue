@@ -1,5 +1,7 @@
 <template>
-    <div>Client</div>
+    <div class="client">
+        <h2 class="section-title">Наши Клиенты</h2>
+    </div>
 </template>
 
 <script>
