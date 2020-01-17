@@ -1,17 +1,17 @@
 <template>
     <div class="font-open-sans leading-tight">
-        <div class="articles hidden container-1550 flex md:flex 2xl:mx-lg">
+        <div class="articles hidden container flex md:flex">
             <div class="tab__content">
                 <div class="article max-w-1089px mr-8 py-16">
                     <h2
-                        class="article__title text-36px text-center font-bold mb-8"
+                        class="article__title text-30px text-center font-bold mb-6 4xl:text-36px 4xl:mb-8"
                     >
                         {{ contentTitle }}
                     </h2>
                     <div
                         v-for="text in contentText"
                         :key="text.id"
-                        class="article__text text-justify font-light text-black text-24px"
+                        class="article__text text-justify font-light text-black text-18px 4xl:text-24px"
                     >
                         {{ text }}
                     </div>
@@ -27,11 +27,13 @@
                 <div
                     v-for="(item, index) in tabs"
                     :key="item.id"
-                    class="tab__link max-w-493px cursor-pointer bg-aqua-back py-4 px-4"
+                    class="tab__link max-w-493px cursor-pointer bg-aqua-back py-3 px-3 4xl:py-4 4xl:px-4"
                     :class="[activetab === index ? 'active' : '']"
                     @click="activetab = index"
                 >
-                    <h3 class="tab__link__title font-bold mb-2 text-18px">
+                    <h3
+                        class="tab__link__title font-bold mb-2 text-16px 4xl:text-18px"
+                    >
                         {{ item.title }}
                     </h3>
                     <div class="tab__link__text text-gray-color text-14px">
@@ -123,29 +125,6 @@ export default {
     &__text {
         &:last-child {
             margin-bottom: 15px;
-        }
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .articles {
-        // margin: 0 60px;
-    }
-    .article {
-        &__title {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        &__text {
-            font-size: 18px;
-        }
-    }
-    .tab {
-        &__link {
-            padding: 15px;
-            &__title {
-                font-size: 16px;
-            }
         }
     }
 }

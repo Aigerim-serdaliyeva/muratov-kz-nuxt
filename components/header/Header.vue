@@ -1,10 +1,12 @@
 <template>
     <div class="header w-full hidden font-roboto z-50 lg:block lg:fixed">
-        <div class="w-1400px mx-auto flex items-center justify-between">
-            <nuxt-link to="/" class="">
-                <img src="@/assets/img/logo.svg" alt="" />
-            </nuxt-link>
-            <MainMenu />
+        <div class="container">
+            <div class="w-11/12 mx-auto flex items-center justify-between">
+                <nuxt-link to="/" class="">
+                    <img src="@/assets/img/logo.svg" alt="" />
+                </nuxt-link>
+                <MainMenu />
+            </div>
         </div>
     </div>
 </template>

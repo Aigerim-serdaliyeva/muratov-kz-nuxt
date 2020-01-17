@@ -14,9 +14,7 @@ module.exports = {
     ...fonts,
     container: {
       center: true,
-      minWidth: {
-        '2xl': '1600px'
-      }
+      padding: '15px'
     },
     extend: {
       colors: {
@@ -36,6 +34,7 @@ module.exports = {
         '30px': '30px',
         '24px': '24px',
         '18px': '18px',
+        '16px': '16px',
         '14px': '14px'
       },
       spacing: {
@@ -47,7 +46,10 @@ module.exports = {
         '170px': '170px',
         '87px': '87px',
         '16px': '16px',
+        '15px': '15px',
         '14px': '14px',
+        '10px': '10px',
+        '5px': '5px',
         '30%': '30%',
         '33%': '33%'
       },
@@ -56,6 +58,11 @@ module.exports = {
         '1140px': '1140px',
         '1089px': '1089px',
         '493px': '493px'
+      },
+      screens: {
+        '2xl': '1360px',
+        '3xl': '1460px',
+        '4xl': '1630px'
       }
     }
   },
