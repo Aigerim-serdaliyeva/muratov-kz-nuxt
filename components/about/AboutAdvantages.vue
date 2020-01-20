@@ -1,8 +1,10 @@
 <template>
-    <div class="about-advantage w-full h-full text-white bg-center bg-cover">
-        <div class="container-1550 lg:flex">
+    <div
+        class="about-advantage bg-no-repeat bg-cover w-full h-full text-white bg-center bg-cover"
+    >
+        <div class="container lg:flex">
             <div
-                class="about-advantage__title blue-rgba relative before-blue w-full h-full py-12 px-4 lg:max-w-3xl  lg:flex-grow"
+                class="about-advantage__title -mx-15px px-3 blue-rgba relative before-blue py-10 lg:py-16 lg:w-5/12"
             >
                 <h2 class="font-roboto font-black uppercase">
                     <span class="text-6xl ">НАШИ </span> <br />
@@ -14,7 +16,7 @@
                 />
             </div>
             <div
-                class="about-advantage__content relative bg-right bg-cover px-3 py-12 lg:py-16 lg:ml-8"
+                class="about-advantage__content -mx-15px px-3 relative bg-right bg-cover py-10 lg:py-16 lg:ml-8 lg:w-7/12"
             >
                 <div
                     v-for="advantage in advantages"
@@ -97,7 +99,41 @@ export default {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1360px) {
+    .about-advantage {
+        &__title {
+            h2 {
+                font-size: 50px;
+                span {
+                    font-size: 140px;
+                }
+            }
+            img {
+                left: -100px;
+                top: 350px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .about-advantage {
+        &__title {
+            h2 {
+                font-size: 42px;
+                span {
+                    font-size: 120px;
+                }
+            }
+            img {
+                left: -140px;
+                top: 350px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
     .about-advantage {
         background-image: none;
         &__title {

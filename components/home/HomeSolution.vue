@@ -1,6 +1,6 @@
 <template>
     <div class="home__solution text-center font-open-sans">
-        <div class="home_solution__block px-6 py-12 lg:bg-accent-color">
+        <div class="px-6 py-12 lg:bg-accent-color">
             <h2 class="font-bold text-3xl mb-10">Наше решение</h2>
             <p class="font-semibold mb-8">
                 Мы назначаем Клиенту Ведущего персонального юриста и
@@ -12,23 +12,24 @@
                 взаимодействия:
             </p>
         </div>
-        <div
-            class="home__solution__content px-6 py-12 max-w-1400px mx-auto lg:flex lg:justify-between"
-        >
+        <div class="container">
             <div
-                v-for="solution in solutions"
-                :key="solution.title"
-                class="solution mb-10 max-w-450px w-full lg:mb-0"
+                class="py-12 max-w-1400px mx-auto sm:flex sm:flex-wrap sm:justify-center"
             >
-                <img
-                    :src="solution.url"
-                    class="block mx-auto mb-4 flex-shrink-0"
-                />
-                <h3 class="font-bold mb-2">{{ solution.title }}</h3>
-                <p>{{ solution.text }}</p>
+                <div
+                    v-for="solution in solutions"
+                    :key="solution.title"
+                    class="solution mb-10 mx-auto max-w-450px w-full sm:w-6/12 lg:mb-0 lg:w-4/12"
+                >
+                    <img
+                        :src="solution.url"
+                        class="block mx-auto mb-4 flex-shrink-0"
+                    />
+                    <h3 class="font-bold mb-2">{{ solution.title }}</h3>
+                    <p>{{ solution.text }}</p>
+                </div>
             </div>
         </div>
-        <!-- <img src="../../assets/img/arrow-mob-bottom.svg" alt="" /> -->
     </div>
 </template>
 

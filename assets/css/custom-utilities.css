@@ -52,6 +52,16 @@
   left: -1000px;
 }
 
+.after-blue::after {
+  position: absolute;
+  content: '';
+  background: rgba(0, 48, 91, 0.76);
+  top: 0;
+  left: 100%;
+  bottom: 0;
+  right: -1000px;
+}
+
 .button {
 
 }

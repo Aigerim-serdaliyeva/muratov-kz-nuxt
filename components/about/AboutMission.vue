@@ -8,22 +8,30 @@
                 Клиента, предоставив качественную юридическую помощь.
             </h2>
         </div>
-        <div class="about-mission__content py-12 px-3">
-            <div class="container-1550">
+        <div class="about-mission__content py-12">
+            <div class="container">
                 <h2
-                    class="font-extrabold text-lg mb-8 text-center lg:text-3xl lg:text-xl"
+                    class="font-extrabold text-24px mb-10 text-center lg:text-30px 2xl:text-40px"
                 >
                     Наши корпоративные ценности:
                 </h2>
                 <div
-                    v-for="mission in missions"
-                    :key="mission.title"
-                    class="mission text-center mb-10"
+                    class="mission__content max-w-1400px mx-auto md:flex flex-wrap justify-between"
                 >
-                    <h3 class="font-bold text-xl mb-4 leading-loose	">
-                        {{ mission.title }}
-                    </h3>
-                    <p class="text-lg">{{ mission.text }}</p>
+                    <div
+                        v-for="mission in missions"
+                        :key="mission.title"
+                        class="mission text-center max-w-550px mb-10 md:px-4 md:w-6/12 3xl:max-w-620px"
+                    >
+                        <h3
+                            class="relative font-bold text-18px mb-4 leading-loose md:text-24px 3xl:text-36px"
+                        >
+                            {{ mission.title }}
+                        </h3>
+                        <p class="text-14px md:text-18px 2xl:text-24px">
+                            {{ mission.text }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,7 +83,6 @@ export default {
 
 .mission {
     h3 {
-        position: relative;
         &::before {
             content: '';
             position: absolute;

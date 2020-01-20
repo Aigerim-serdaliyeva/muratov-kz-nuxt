@@ -1,6 +1,6 @@
 <template>
-    <div class="about-princip bg-accent-color text-center py-12 px-3">
-        <div class="container-1280">
+    <div class="about-princip bg-accent-color text-center py-12">
+        <div class="container">
             <h2 class="font-extrabold uppercase text-2xl mb-16 lg:text-4xl">
                 КОРПОРАТИВНЫЕ ПРИНЦИПЫ РАБОТЫ ЮРИДИЧЕСКОЙ КОМПАНИИ <br />
                 «MURATOV PARTNERS»
@@ -10,10 +10,10 @@
                 :key="princip"
                 class="princip mb-10 max-w-1140px mx-auto"
             >
-                <h3 class="font-extrabold text-xl mb-3">
+                <h3 class="font-extrabold text-18px lg:text-20px mb-3">
                     {{ princip.title }}
                 </h3>
-                <p class="lg:text-lg">{{ princip.text }}</p>
+                <p class="text-14px lg:text-18px">{{ princip.text }}</p>
             </div>
         </div>
     </div>

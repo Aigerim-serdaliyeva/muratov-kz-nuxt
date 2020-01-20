@@ -1,26 +1,43 @@
 <template>
-    <ul class="flex justify-between w-full">
+    <ul class="flex justify-between w-full max-w-750px xl:max-w-890px">
         <li>
-            <nuxt-link to="/" exact active-class="active py-4"
+            <nuxt-link to="/" class="main-menu-link" exact active-class="active"
                 >Главная</nuxt-link
             >
         </li>
         <li>
-            <nuxt-link to="/about" active-class="active">О нас</nuxt-link>
+            <nuxt-link to="/about" class="main-menu-link" active-class="active"
+                >О нас</nuxt-link
+            >
         </li>
         <li>
-            <nuxt-link to="/client" active-class="active"
+            <nuxt-link to="/client" class="main-menu-link" active-class="active"
                 >Клиенты и Партнеры</nuxt-link
             >
         </li>
         <li>
-            <nuxt-link to="/articles" active-class="active">Статьи</nuxt-link>
+            <nuxt-link
+                to="/articles"
+                class="main-menu-link"
+                active-class="active"
+                >Статьи</nuxt-link
+            >
         </li>
         <li>
-            <nuxt-link to="/vacancies" active-class="active">Карьера</nuxt-link>
+            <nuxt-link
+                to="/vacancies"
+                class="main-menu-link"
+                active-class="active"
+                >Карьера</nuxt-link
+            >
         </li>
         <li>
-            <nuxt-link to="/contacts" active-class="active">Контакты</nuxt-link>
+            <nuxt-link
+                to="/contacts"
+                class="main-menu-link"
+                active-class="active"
+                >Контакты</nuxt-link
+            >
         </li>
     </ul>
 </template>
@@ -31,16 +48,15 @@ export default {};
 
 <style lang="scss" scoped>
 ul {
-    max-width: 890px;
-    li {
-        font-size: 18px;
-        padding: 30px 10px 25px;
+    .main-menu-link {
         border-bottom: 5px solid transparent;
-        margin-right: 40px;
         &.active,
         &:hover {
             border-bottom: 5px solid #3ca6cd;
         }
     }
+}
+
+@media screen and (max-width: 1280px) {
 }
 </style>

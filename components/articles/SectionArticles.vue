@@ -1,6 +1,6 @@
 <template>
     <div class="font-open-sans leading-tight">
-        <div class="articles hidden container flex md:flex">
+        <div class="articles hidden container md:flex">
             <div class="tab__content">
                 <div class="article max-w-1089px mr-8 py-16">
                     <h2

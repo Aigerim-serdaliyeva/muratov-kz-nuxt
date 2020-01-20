@@ -1,37 +1,43 @@
 <template>
-    <div class="font-open-sans lg:flex">
-        <div
-            class="home__problems__question w-full bg-accent-color py-16 lg:max-w-4xl"
-        >
-            <h2
-                class="text-center uppercase text-00305B text-3xl font-extrabold leading-tight mb-12 lg:text-6xl"
+    <div class="font-open-sans">
+        <div class="container lg:flex">
+            <div
+                class="home__problems__question section-right bg-accent-color py-16"
             >
-                Часто <br />
-                встречаетесь <br />
-                с такими <br />
-                проблемами
-            </h2>
-            <img
-                src="@/assets/img/question-mark.svg"
-                class="block mx-auto w-8/12 wow ghost lg:w-auto"
-            />
+                <h2
+                    class="text-center uppercase text-00305B text-4xl font-extrabold leading-tight mb-10 lg:text-5xl 2xl:text-6xl"
+                >
+                    Часто <br />
+                    встречаетесь <br />
+                    с такими <br />
+                    проблемами
+                </h2>
+                <img
+                    src="@/assets/img/question-mark.svg"
+                    class="block mx-auto w-8/12 wow ghost sm:w-4/12 lg:w-auto"
+                />
+            </div>
+            <ul
+                class="home__problems__list py-12 pl-6 lg:w-3/7 lg:flex lg:flex-col lg:justify-center lg:py-4"
+            >
+                <li
+                    v-for="list in lists"
+                    :key="list.title"
+                    class="text-center mb-6 lg:text-left lg:pl-16 2xl:mb-10"
+                >
+                    <h3
+                        class="font-bold mb-2 pb-1 text-lg lg:text-xl 2xl:text-2xl"
+                    >
+                        {{ list.title }}
+                    </h3>
+                    <p
+                        class="font-normal leading-tight lg:text-16px 2xl:max-w-2xl"
+                    >
+                        {{ list.main }}
+                    </p>
+                </li>
+            </ul>
         </div>
-        <ul
-            class="home__problems__list py-12 px-6 lg:flex lg:flex-col lg:justify-center lg:py-4"
-        >
-            <li
-                v-for="list in lists"
-                :key="list.title"
-                class="text-center mb-6 lg:text-left lg:pl-16 lg:mb-10"
-            >
-                <h3 class="font-bold mb-2 pb-1 text-lg lg:text-2xl">
-                    {{ list.title }}
-                </h3>
-                <p class="font-normal leading-tight lg:text-lg lg:max-w-2xl">
-                    {{ list.main }}
-                </p>
-            </li>
-        </ul>
     </div>
 </template>
 
@@ -76,6 +82,15 @@ export default {
     &__problems {
         &__question {
             box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+            &::before {
+                content: '';
+                position: absolute;
+                background: #eaf4f6;
+                top: 0;
+                right: 100%;
+                bottom: 0;
+                left: -1000px;
+            }
         }
 
         &__list {
