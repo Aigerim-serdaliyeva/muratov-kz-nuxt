@@ -18,7 +18,7 @@
                 />
             </div>
             <ul
-                class="home__problems__list py-12 pl-6 lg:w-3/7 lg:flex lg:flex-col lg:justify-center lg:py-4"
+                class="home__problems__list py-12 pl-0 lg:w-3/7 lg:flex lg:pl-6 lg:flex-col lg:justify-center lg:py-4"
             >
                 <li
                     v-for="list in lists"

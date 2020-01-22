@@ -2,7 +2,9 @@
     <div class="home__commercial bg-blue-back text-white py-16">
         <div class="container">
             <div class="max-w-1280px mx-auto">
-                <h2 class="text-center max-w-6xl text-lg font-medium mb-12">
+                <h2
+                    class="text-center font-normal text-18px max-w-6xl mb-12 lg:text-20px 2xl:text-24px"
+                >
                     Штатные юристы выполняют много работы технического
                     характера, немного тактического и очень редко
                     стратегического плана. Однако заработная плата такого юриста
@@ -22,7 +24,9 @@
                         {{ service }}
                     </li>
                 </ul>
-                <button class="button-blue text-center py-3 px-4">
+                <button
+                    class="button-blue text-16px text-center mx-auto block py-3 px-4 lg:text-22px"
+                >
                     Получить коммерческое предложение
                 </button>
             </div>

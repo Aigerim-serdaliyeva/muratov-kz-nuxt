@@ -14,7 +14,7 @@
                         class="block mx-auto lg:mx-0 lg:max-w-150px 2xl:max-w-170px  4xl:max-w-full"
                     />
                     <h2
-                        class="font-open-sans font-extrabold font-bold mt-10 lg:mt-0 lg:text-70px 2xl:text-80px 4xl:text-94px"
+                        class="font-open-sans text-60px font-extrabold font-bold mt-10 lg:mt-0 lg:text-70px 2xl:text-80px 4xl:text-94px"
                     >
                         MURATOV PARTNERS
                     </h2>
