@@ -1,21 +1,21 @@
 <template>
-    <ul class="flex justify-between w-full max-w-750px xl:max-w-890px">
-        <li>
+    <ul class="md:flex md:justify-between w-full max-w-750px xl:max-w-890px">
+        <li class="text-center">
             <nuxt-link to="/" class="main-menu-link" exact active-class="active"
                 >Главная</nuxt-link
             >
         </li>
-        <li>
+        <li class="text-center">
             <nuxt-link to="/about" class="main-menu-link" active-class="active"
                 >О нас</nuxt-link
             >
         </li>
-        <li>
+        <li class="text-center">
             <nuxt-link to="/client" class="main-menu-link" active-class="active"
                 >Клиенты и Партнеры</nuxt-link
             >
         </li>
-        <li>
+        <li class="text-center">
             <nuxt-link
                 to="/articles"
                 class="main-menu-link"
@@ -23,7 +23,7 @@
                 >Статьи</nuxt-link
             >
         </li>
-        <li>
+        <li class="text-center">
             <nuxt-link
                 to="/vacancies"
                 class="main-menu-link"
@@ -31,7 +31,7 @@
                 >Карьера</nuxt-link
             >
         </li>
-        <li>
+        <li class="text-center">
             <nuxt-link
                 to="/contacts"
                 class="main-menu-link"
@@ -58,5 +58,18 @@ ul {
 }
 
 @media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 768px) {
+    ul {
+        .main-menu-link {
+            border: none;
+            &.active,
+            &:hover {
+                border: none;
+                color: #3ca6cd;
+            }
+        }
+    }
 }
 </style>

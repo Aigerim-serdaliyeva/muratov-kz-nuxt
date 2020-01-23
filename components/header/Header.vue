@@ -1,5 +1,5 @@
 <template>
-    <div class="header w-full hidden font-roboto z-50 lg:block lg:fixed">
+    <div class="header w-full font-roboto z-50 lg:block lg:fixed">
         <div class="container">
             <div class="w-11/12 mx-auto flex items-center justify-between">
                 <nuxt-link to="/" class="">

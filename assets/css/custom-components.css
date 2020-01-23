@@ -3,7 +3,7 @@
 }
 
 .main-menu-link {
-  @apply text-18px pt-25px pb-20px px-10px block
+  @apply text-18px py-15px block text-center mx-auto
 }
 
 .section-title {
@@ -15,16 +15,26 @@
 }
 
 .contact-link {
-  @apply flex items-center text-20px
+  @apply flex items-center text-18px mb-15px
 }
 
 .contact-data {
-  @apply text-14px flex items-center justify-center mb-20px
+  @apply text-14px flex items-center justify-center mb-10px
+}
+
+@screen md {
+  .main-menu-link {
+    @apply pt-25px pb-20px px-10px
+  }
 }
 
 @screen lg {
   .section-title {
     @apply text-40px py-6
+  }
+
+  .contact-data {
+    @apply mb-20px
   }
 
   .section-right {

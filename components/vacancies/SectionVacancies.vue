@@ -8,76 +8,23 @@
             >
             <span>с Muratov Partners!</span>
         </h2>
-        <div class="container">
+        <div class="container relative">
+            <VacancyContact class="hidden md:block" />
             <div
-                v-for="vacancy in vacancies"
+                v-for="(vacancy, index) in vacancies"
                 :key="vacancy.title"
                 class="vacancy"
             >
-                <h2 class="vacancy__title text-center text-24px py-4">
+                <h2
+                    class="vacancy__title text-center cursor-pointer font-semibold py-3 -mx-15px text-18px md:text-24px md:py-4 md:mx-0"
+                    @click="toggleVacancy(index + 1)"
+                >
                     {{ vacancy.title }}
                 </h2>
                 <div
-                    class="vacancy__block text-blue-back bg-accent-color pt-40px pb-20px pr-40px pl-12% text-18px"
+                    :ref="`vacancyBlock${index + 1}`"
+                    class="vacancy__block text-blue-back bg-accent-color text-14px py-4 px-3 -mx-15px md:pt-40px md:pb-20px md:pr-40px md:pl-12% md:text-18px md:mx-0"
                 >
-                    <div
-                        ref="contactsBlock"
-                        class="contacts-block text-center max-w-316px w-full"
-                        :style="{
-                            position: position,
-                            left: `60%`,
-                            top: `${contactsBlockTop}px`
-                        }"
-                    >
-                        <div
-                            class="contacts-block__content bg-white rounded-lg shadow-contact pt-30px px-40px pb-10px mb-5px"
-                        >
-                            <div
-                                class="contacts-block__title font-semibold text-24px mb-30px relative"
-                            >
-                                Контакты
-                            </div>
-                            <div class="contact-data">
-                                <img
-                                    src="../../assets/img/vacancy/phone.png"
-                                    class="mr-5px"
-                                />
-                                <a
-                                    id="phone_number"
-                                    href="tel:+77010316711"
-                                    class="text-phone"
-                                    >+7 (701) 031 67 11</a
-                                >
-                                <span> (Дарья)</span>
-                            </div>
-                            <div class="contact-data">
-                                <img
-                                    src="../../assets/img/vacancy/telephone.png"
-                                    class="mr-5px"
-                                />
-                                <a
-                                    id="phone_number"
-                                    href="tel:+77272777600"
-                                    class="text-phone"
-                                    >+7 (727) 277 76 00</a
-                                >
-                                <span>, внутр. 603</span>
-                            </div>
-                            <div class="contact-data">
-                                <img
-                                    src="../../assets/img/vacancy/message.png"
-                                    class="mr-5px"
-                                /><a href="mailto:recrutment@muratov.kz"
-                                    >recrutment@muratov.kz</a
-                                >
-                            </div>
-                        </div>
-                        <a
-                            href="mailto:recrutment@muratov.kz"
-                            class="contacts-block__link font-semibold text-white text-18px rounded-lg bg-3ca6cd block p-10px"
-                            >Отправить резюме</a
-                        >
-                    </div>
                     <div
                         v-for="list in vacancy.lists"
                         :key="list.subtitle"
@@ -90,6 +37,8 @@
                             </li>
                         </ul>
                     </div>
+
+                    <VacancyContact class="block md:hidden" />
                 </div>
             </div>
             <div
@@ -107,19 +56,35 @@
 </template>
 
 <script>
+// global jquery
+import $ from 'jquery';
+
+import VacancyContact from './VacancyContact.vue';
+window.$ = $;
 export default {
+    components: { VacancyContact },
     data() {
         return {
-            vacancies: require('@/assets/json/vacancies'),
-            contactsBlockOffsetTop: 0,
-            headerHeight: 66,
-            isContactsBlockSticked: false
+            vacancies: require('@/assets/json/vacancies')
         };
+    },
+    methods: {
+        toggleVacancy(index) {
+            if (window.outerWidth > 767) {
+                return;
+            }
+            $(this.$refs[`vacancyBlock${index}`]).slideToggle('slow');
+            for (let i = 1; i <= 3; i++) {
+                if (i !== index) {
+                    $(this.$refs[`vacancyBlock${i}`]).slideUp('slow');
+                }
+            }
+        }
     }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .vacancy {
     &__title {
         border: 1px solid rgba(0, 48, 91, 0.3);
@@ -128,19 +93,11 @@ export default {
     }
 }
 
-.contacts-block {
-    &__title {
-        &::after {
-            content: '';
-            width: 72px;
-            height: 1px;
-            position: absolute;
-            background: #cfcfcf;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-            bottom: -15px;
-        }
+@media screen and (max-width: 768px) {
+    .contacts-block {
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
     }
 }
 </style>

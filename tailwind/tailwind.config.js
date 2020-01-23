@@ -25,6 +25,7 @@ module.exports = {
     extend: {
       colors: {
         '252525': '#252525',
+        'gray-1': '#AFAFAF',
         'accent-color': '#EAF4F6',
         'gray-color': '#656565',
         'text-color': '#092B54',
@@ -48,7 +49,8 @@ module.exports = {
         '20px': '20px',
         '18px': '18px',
         '16px': '16px',
-        '14px': '14px'
+        '14px': '14px',
+        '12px': '12px'
       },
       spacing: {
         '1400px': '1400px',
@@ -93,6 +95,7 @@ module.exports = {
         '493px': '493px',
         '450px': '450px',
         '316px': '316px',
+        '215px': '215px',
         '170px': '170px',
         '150px': '150px',
         '140px': '140px',

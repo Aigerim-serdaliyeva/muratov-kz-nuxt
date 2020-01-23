@@ -1,11 +1,15 @@
 <template>
     <div class="client">
         <h2 class="section-title">Наши Клиенты</h2>
+        <SectionClient />
     </div>
 </template>
 
 <script>
-export default {};
+import SectionClient from '../../components/client/SectionClient.vue';
+export default {
+    components: { SectionClient }
+};
 </script>
 
 <style lang="scss" scoped></style>

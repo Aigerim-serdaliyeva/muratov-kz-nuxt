@@ -150,7 +150,7 @@ export default {
                 height: 80px;
                 width: 280px;
                 left: 50%;
-                top: 49.8%;
+                top: 53.8%;
             }
         }
         &__content {
