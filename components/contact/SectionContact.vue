@@ -16,23 +16,28 @@
                         class="max-w-450px w-full mx-auto"
                     />
                 </div>
-                <div class="contact mb-30px md:w-6/12 md:mb-0">
+                <div class="contact mb-30px md:w-6/12 md:mb-0 md:ml-5">
                     <a href="" class="contact-link"
                         ><img
                             src="../../assets/img/email.png"
-                            class="mr-10px"
+                            class="mr-20px"
                         />info@muratov.kz</a
                     >
                     <a href="+77272777606" class="contact-link"
-                        ><img src="../../assets/img/phone.png" />+7 (727)
-                        277-76-06</a
-                    >
-                    <a href="" class="contact-link"
-                        ><img src="../../assets/img/address.png" />г.Алматы, ул.
-                        Шевченко, 153/1</a
+                        ><img
+                            class="mr-20px"
+                            src="../../assets/img/phone.png"
+                        />+7 (727) 277-76-06</a
                     >
                     <a href="" class="contact-link"
                         ><img
+                            class="mr-20px"
+                            src="../../assets/img/address.png"
+                        />г.Алматы, ул. Шевченко, 153/1</a
+                    >
+                    <a href="" class="contact-link"
+                        ><img
+                            class="mr-20px"
                             src="../../assets/img/site.png"
                         />@muratovpartners.kz</a
                     >

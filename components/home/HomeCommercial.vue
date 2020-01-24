@@ -25,7 +25,7 @@
                     </li>
                 </ul>
                 <button
-                    class="button-blue text-16px text-center mx-auto block py-3 px-4 lg:text-22px"
+                    class="button-blue font-medium text-16px text-center mx-auto block py-3 px-15px sm:text-22px"
                 >
                     Получить коммерческое предложение
                 </button>

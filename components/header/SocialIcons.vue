@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center justify-center">
+    <div class="flex items-center justify-center mt-30px">
         <a href="https://www.instagram.com/muratov_partners/" target="_blank"
             ><img src="../../assets/img/instagram-header.png"
         /></a>

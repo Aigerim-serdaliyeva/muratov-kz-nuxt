@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="article__mobile py-6 md:hidden">
+        <div class="article__mobile md:hidden">
             <div v-for="(item, index) in tabs" :key="item.id">
                 <div
                     class="article__mobile__header cursor-pointer bg-aqua-back py-4 px-3"

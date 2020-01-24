@@ -3,11 +3,27 @@
 }
 
 .main-menu-link {
-  @apply text-18px py-15px block text-center mx-auto
+  @apply text-18px py-10px block text-center mx-auto
 }
 
 .section-title {
   @apply font-open-sans font-extrabold text-white bg-blue-back shadow-title text-24px text-center py-4 px-3
+}
+
+.form {
+  @apply h-screen flex flex-col items-center justify-center font-open-sans bg-form-back w-full max-w-890px mx-auto
+}
+
+.input {
+  @apply border-b border-3ca6cd bg-form-back font-light font-open-sans max-w-332px w-full text-center block mx-auto mb-5px text-14px
+}
+
+.input-div {
+  @apply mb-20px block
+}
+
+.input-required {
+  @apply text-12px text-center block text-red-500
 }
 
 .section-right {
@@ -22,9 +38,18 @@
   @apply text-14px flex items-center justify-center mb-10px
 }
 
+@screen sm {
+  .form {
+    @apply pt-80px pb-60px px-70px block
+  }
+}
+
 @screen md {
   .main-menu-link {
     @apply pt-25px pb-20px px-10px
+  }
+  .input {
+    @apply text-18px
   }
 }
 
