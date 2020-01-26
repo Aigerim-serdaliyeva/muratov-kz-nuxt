@@ -45,9 +45,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .libra {
-    @include flex(center, center);
+    /* @include flex(center, center); */
     position: relative;
     z-index: 10;
     &__lines {
@@ -88,20 +88,20 @@ export default {
 // Libra color blue
 .libra-col-blue {
     span {
-        &:nth-child(odd) {
-            background: linear-gradient(
-                to left,
-                $maincol 0%,
-                rgba(255, 255, 255, 0) 100%
-            );
-        }
-        &:nth-child(even) {
-            background: linear-gradient(
-                to right,
-                $maincol 0%,
-                rgba(255, 255, 255, 0) 100%
-            );
-        }
+        // &:nth-child(odd) {
+        //     background: linear-gradient(
+        //         to left,
+        //         $maincol 0%,
+        //         rgba(255, 255, 255, 0) 100%
+        //     );
+        // }
+        // &:nth-child(even) {
+        //     background: linear-gradient(
+        //         to right,
+        //         $maincol 0%,
+        //         rgba(255, 255, 255, 0) 100%
+        //     );
+        // }
     }
 }
 
@@ -153,52 +153,52 @@ export default {
         }
         &__small {
             .libra__lines {
-                @include size(7%, 100%);
+                /* @include size(7%, 100%); */
                 span {
                     &:first-child,
                     &:nth-child(2) {
-                        bottom: w(2);
+                        // bottom: w(2);
                     }
                     &:nth-child(3),
                     &:nth-child(4) {
-                        top: w(3);
+                        // top: w(3);
                     }
                 }
             }
             svg {
-                @include size(w(40), w(40));
+                /* @include size(w(40), w(40)); */
             }
         }
         &__large {
             .libra__lines {
-                @include size(30%, 100%);
+                /* @include size(30%, 100%); */
             }
             svg {
-                @include size(w(45.99), w(45.99));
+                /* @include size(w(45.99), w(45.99)); */
             }
         }
     }
     // Standard padding
     .libra-s-p {
-        margin: w(40) 0;
+        /* margin: w(40) 0; */
     }
     // In end of block
     .libra-end {
-        bottom: w(-22);
+        /* bottom: w(-22); */
         left: 0;
     }
     // In the top of block
     .libra-start {
-        top: w(-22);
+        /* top: w(-22); */
         left: 0;
     }
     // Libra padding top large
     .libra-p-t-l {
-        padding-top: w(16.26);
+        /* padding-top: w(16.26); */
     }
     // Libra padding bottom large
     .libra-p-b-l {
-        padding-bottom: w(16.26);
+        /* padding-bottom: w(16.26); */
     }
 }
 
@@ -210,52 +210,52 @@ export default {
         }
         &__small {
             .libra__lines {
-                @include size(10%, 100%);
+                /* @include size(10%, 100%); */
                 opacity: 0.5;
                 span {
                     &:first-child,
                     &:nth-child(2) {
-                        bottom: wm(1);
+                        /* bottom: wm(1); */
                     }
                     &:nth-child(3),
                     &:nth-child(4) {
-                        top: wm(1);
+                        /* top: wm(1); */
                     }
                 }
             }
             svg {
-                @include size(wm(15.65), wm(15.65));
+                /* @include size(wm(15.65), wm(15.65)); */
             }
         }
         &__large {
             .libra__lines {
-                @include size(30%, 100%);
+                /* @include size(30%, 100%); */
                 opacity: 1;
             }
             svg {
-                @include size(wm(32.52), wm(32.52));
+                /* @include size(wm(32.52), wm(32.52)); */
             }
         }
     }
     // Standard padding
     .libra-s-p {
-        margin: wm(30) 0;
+        /* margin: wm(30) 0; */
     }
     // In end of block
     .libra-end {
-        bottom: wm(-22);
+        /* bottom: wm(-22); */
     }
     // In the top of block
     .libra-start {
-        top: wm(-16);
+        /* top: wm(-16); */
     }
     // Libra padding top large
     .libra-p-t-l {
-        padding-top: wm(16.26);
+        /* padding-top: wm(16.26); */
     }
     // Libra padding bottom large
     .libra-p-b-l {
-        padding-bottom: wm(16.26);
+        /* padding-bottom: wm(16.26); */
     }
 }
 </style>

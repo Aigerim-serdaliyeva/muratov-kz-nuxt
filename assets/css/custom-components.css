@@ -46,7 +46,7 @@
 
 @screen md {
   .main-menu-link {
-    @apply pt-25px pb-20px px-10px
+    @apply pt-25px pb-20px px-10px text-16px
   }
   .input {
     @apply text-18px
@@ -70,6 +70,9 @@
 @screen 2xl {
   .section-right {
     @apply max-w-2xl
+  }
+  .main-menu-link {
+      @apply text-18px
   }
 }
 

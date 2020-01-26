@@ -1,8 +1,9 @@
 <template>
     <div>
-        <HeaderMobile class="" />
-        <Header class="" />
+        <HeaderMobile class="sm:hidden" />
+        <Header class="hidden sm:block" />
         <SectionMain />
+        <!-- <BaseLibra /> -->
         <FormModal />
         <nuxt />
         <Footer />
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+import BaseLibra from '../components/animation/BaseLibra';
 import FormModal from '../components/form/FormModal.vue';
 import HeaderMobile from '../components/header/HeaderMobile.vue';
 import SectionMain from '../components/main/SectionMain.vue';
@@ -21,7 +23,8 @@ export default {
         Footer,
         SectionMain,
         HeaderMobile,
-        FormModal
+        FormModal,
+        BaseLibra
     },
     data() {
         return {};

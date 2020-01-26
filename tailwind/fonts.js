@@ -1,6 +1,6 @@
 module.exports = {
-  fontFamily: {
-    roboto: ['Roboto'],
-    'open-sans': ['Open Sans']
-  }
+    fontFamily: {
+        roboto: ['Roboto'],
+        'open-sans': ['Open Sans']
+    }
 };

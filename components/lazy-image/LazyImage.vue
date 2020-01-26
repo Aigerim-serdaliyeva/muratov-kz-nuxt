@@ -99,12 +99,12 @@ export default {
             }
 
             return this.dev && !this.isFromServer
-                ? ${this.pathToImg}/${this.url}
-                : ${this.pathToImg}/100/${this.url};
+                ? `${this.pathToImg}/${this.url}`
+                : `${this.pathToImg}/100/${this.url}`;
         },
         originalImgSrc() {
             // Если ссылка внешняя то вернуть полный путь , иначе взять локальный файл
-            return this.isExternal ? this.url : images/${this.url};
+            return this.isExternal ? this.url : `images/${this.url}`;
         },
         // название файла
         filename() {
@@ -125,7 +125,7 @@ export default {
     },
     created() {
         if (this.isFromServer && this.isExternal) {
-       throw new Error('isFromServer and isExternal are true');
+            throw new Error('isFromServer and isExternal are true');
         }
     },
     methods: {
@@ -145,9 +145,9 @@ export default {
             const generateSrcSetArr = sizes.map((size) => {
                 // Для того чтобы картинки не кэшировались
                 const date = Date.now();
-                const path = ${this.pathToImg}/${size}/${this.filename}.${type}?v=${date};
+                const path = `${this.pathToImg}/${size}/${this.filename}.${type}?v=${date}`;
 
-                return ${path} ${size}w;
+                return `${path} ${size}w`;
             });
 
             return generateSrcSetArr.join(',');

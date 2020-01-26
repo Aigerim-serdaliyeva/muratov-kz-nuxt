@@ -71,7 +71,8 @@
                 >
                     <input
                         v-model="phone"
-                        type="text"
+                        v-mask="'8(###)-###-##-##'"
+                        type="tel"
                         class="input"
                         placeholder="Мобильный номер телефона*"
                     />
