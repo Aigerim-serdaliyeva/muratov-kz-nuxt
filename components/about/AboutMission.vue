@@ -21,7 +21,7 @@
                     <div
                         v-for="mission in missions"
                         :key="mission.title"
-                        class="mission text-center max-w-550px mb-10 md:px-4 md:w-6/12 3xl:max-w-620px"
+                        class="mission text-center max-w-550px mb-10 md:px-4 md:w-6/12 3xl:max-w-620px rotateInUpLeft wow"
                     >
                         <h3
                             class="relative font-bold text-18px mb-4 leading-loose md:text-24px 3xl:text-36px"

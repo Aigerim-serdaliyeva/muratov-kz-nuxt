@@ -11,34 +11,51 @@
                 >
                     <img
                         src="@/assets/img/logo-white.svg"
-                        class="block mx-auto lg:mx-0 lg:max-w-150px 2xl:max-w-170px  4xl:max-w-full"
+                        class="block mx-auto lg:mx-0 lg:max-w-150px 2xl:max-w-160px  4xl:max-w-full"
                     />
                     <h2
-                        class="font-open-sans text-60px font-extrabold font-bold mt-10 lg:mt-0 lg:text-70px 2xl:text-80px 4xl:text-94px"
+                        class="font-open-sans text-60px font-extrabold font-bold mt-10 lg:mt-0 lg:text-60px 2xl:text-70px 4xl:text-94px"
                     >
                         MURATOV PARTNERS
                     </h2>
                 </div>
                 <div
-                    class="main__text font-normal text-16px mb-8 lg:text-24px 2xl:text-30px lg:mb-32"
+                    class="main__text font-normal text-16px mb-8 lg:text-24px 2xl:text-28px lg:mb-32"
                 >
                     Защита вашего бизнеса – наш приоритет!
                 </div>
                 <button
                     class="button button--linear text-18px py-5px px-5 lg:text-24px"
-                    @click="openForm()"
+                    @click="showModal"
                 >
                     Получить консультацию
                 </button>
+                <ModalWindow v-if="modalVisible">
+                    <template v-slot:modal>
+                        <Form />
+                    </template>
+                </ModalWindow>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex';
+import Form from '../form/Form.vue';
+import ModalWindow from '../modal-window/ModalWindow.vue';
+
 export default {
+    components: { ModalWindow, Form },
+    computed: {
+        ...mapState({
+            modalVisible: ({ modal }) => modal.modalVisible
+        })
+    },
     methods: {
-        openForm() {}
+        ...mapMutations({
+            showModal: 'modal/showModal'
+        })
     }
 };
 </script>

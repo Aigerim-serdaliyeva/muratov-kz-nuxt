@@ -4,7 +4,7 @@
     >
         <div class="container lg:flex">
             <div
-                class="about-advantage__title -mx-15px px-3 blue-rgba relative before-blue py-10 lg:py-16 lg:w-5/12"
+                class="about-advantage__title -mx-15px px-3 blue-rgba relative before-blue py-10 lg:py-12 lg:w-5/12 3xl:py-16"
             >
                 <h2 class="font-roboto font-black uppercase">
                     <span class="text-6xl ">НАШИ </span> <br />
@@ -16,12 +16,12 @@
                 />
             </div>
             <div
-                class="about-advantage__content -mx-15px px-3 relative bg-right bg-cover py-10 lg:py-16 lg:ml-8 lg:w-7/12"
+                class="about-advantage__content -mx-15px px-3 relative bg-right bg-cover py-10 lg:py-12 lg:ml-8 lg:w-7/12 3xl:py-16"
             >
                 <div
                     v-for="advantage in advantages"
                     :key="advantage.title"
-                    class="advantage text-center mb-8 last:mb-0 lg:flex lg:text-left"
+                    class="advantage text-center mb-8 last:mb-0 lg:flex lg:text-left wow slideInRight"
                 >
                     <div
                         class="advantage__img flex-shrink-0 mb-4 last:mb-0 lg:mr-8"

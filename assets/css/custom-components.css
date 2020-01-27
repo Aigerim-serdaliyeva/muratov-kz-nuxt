@@ -15,7 +15,7 @@
 }
 
 .input {
-  @apply border-b border-3ca6cd bg-form-back font-light font-open-sans max-w-332px w-full text-center block mx-auto mb-5px text-14px
+  @apply border-b border-3ca6cd bg-form-back font-light font-open-sans max-w-332px w-full text-center block mx-auto mb-5px text-14px text-4D4D4D
 }
 
 .input-div {
@@ -40,7 +40,7 @@
 
 @screen sm {
   .form {
-    @apply pt-80px pb-60px px-70px block
+    @apply pt-80px pb-60px px-70px block h-auto
   }
 }
 
@@ -63,7 +63,7 @@
   }
 
   .section-right {
-    @apply mx-0 w-4/7
+    @apply mx-0 w-4/9
   }
 }
 

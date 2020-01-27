@@ -2,10 +2,10 @@
     <div class="font-open-sans">
         <div class="container lg:flex">
             <div
-                class="home__problems__question section-right bg-accent-color py-16"
+                class="home__problems__question section-right bg-accent-color py-12"
             >
                 <h2
-                    class="text-center uppercase text-00305B text-4xl font-extrabold leading-tight mb-10 lg:text-5xl 2xl:text-6xl"
+                    class="text-center uppercase text-00305B text-4xl font-extrabold leading-tight mb-10 lg:text-5xl 3xl:text-6xl"
                 >
                     Часто <br />
                     встречаетесь <br />
@@ -14,19 +14,19 @@
                 </h2>
                 <img
                     src="@/assets/img/question-mark.svg"
-                    class="block mx-auto w-8/12 wow ghost sm:w-4/12 lg:w-auto"
+                    class="block mx-auto w-8/12 wow ghost sm:w-4/12 lg:w-6/12 3xl:w-auto"
                 />
             </div>
             <ul
-                class="home__problems__list py-12 pl-0 lg:w-3/7 lg:flex lg:pl-6 lg:flex-col lg:justify-center lg:py-4"
+                class="home__problems__list py-12 pl-0 lg:w-5/9 lg:flex lg:pl-6 lg:flex-col lg:justify-center lg:py-4"
             >
                 <li
                     v-for="list in lists"
                     :key="list.title"
-                    class="text-center mb-6 lg:text-left lg:pl-16 2xl:mb-10"
+                    class="wow slideInRight text-center mb-6 lg:text-left lg:pl-16 lg:mb-6 3xl:mb-10"
                 >
                     <h3
-                        class="font-bold mb-2 pb-1 text-lg lg:text-xl 2xl:text-2xl"
+                        class="font-bold mb-2 pb-1 text-lg lg:text-xl 3xl:text-2xl"
                     >
                         {{ list.title }}
                     </h3>
@@ -78,6 +78,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.ghost {
+    animation: ghost 2.5s ease-in-out infinite both;
+    @keyframes ghost {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+}
+
 .home {
     &__problems {
         &__question {

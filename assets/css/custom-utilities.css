@@ -1,3 +1,18 @@
+.ghost {
+  animation: ghost 2.5s ease-in-out infinite both;
+  @keyframes ghost {
+      0% {
+          transform: translateY(20px);
+      }
+      50% {
+          transform: translateY(0);
+      }
+      100% {
+          transform: translateY(20px);
+      }
+  }
+}
+
 .bg-white-57 {
     background: rgba(255, 255, 255, 0.57);
 }
@@ -83,17 +98,4 @@
   border-radius: 15px;
 }
 
-.ghost {
-  animation: ghost 2.5s ease-in-out infinite both;
-  @keyframes ghost {
-      0% {
-        transform: translateY(20px);
-      }
-      50% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(20px);
-      }
-  }
-}
+

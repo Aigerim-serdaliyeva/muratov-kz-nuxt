@@ -23,10 +23,12 @@
                 >
                     <img
                         :src="solution.url"
-                        class="block mx-auto mb-4 flex-shrink-0"
+                        class="block mx-auto mb-4 flex-shrink-0 wow zoomIn"
                     />
-                    <h3 class="font-bold mb-2">{{ solution.title }}</h3>
-                    <p>{{ solution.text }}</p>
+                    <h3 class="font-bold mb-2 wow zoomIn">
+                        {{ solution.title }}
+                    </h3>
+                    <p class="wow zoomIn">{{ solution.text }}</p>
                 </div>
             </div>
         </div>

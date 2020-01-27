@@ -3,7 +3,7 @@
         <div class="container">
             <div class="max-w-1280px mx-auto">
                 <h2
-                    class="text-center font-normal text-18px max-w-6xl mb-12 lg:text-20px 2xl:text-24px"
+                    class="text-center mx-auto font-normal text-18px max-w-6xl mb-12 lg:text-20px 2xl:text-24px"
                 >
                     Штатные юристы выполняют много работы технического
                     характера, немного тактического и очень редко
@@ -26,16 +26,27 @@
                 </ul>
                 <button
                     class="button-blue font-medium text-16px text-center mx-auto block py-3 px-15px sm:text-22px"
+                    @click="showModal"
                 >
                     Получить коммерческое предложение
                 </button>
+                <ModalWindow v-if="modalVisible">
+                    <template v-slot:modal>
+                        <Form
+                            form-title="Получить коммерческое предложение"
+                        ></Form>
+                    </template>
+                </ModalWindow>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex';
+import ModalWindow from '../modal-window/ModalWindow.vue';
 export default {
+    components: { ModalWindow },
     data() {
         return {
             services: [
@@ -44,6 +55,16 @@ export default {
                 'Над задачами Клиента трудится не 1, а целых 3 юриста во главе с Директором юридического департамента.'
             ]
         };
+    },
+    computed: {
+        ...mapState({
+            modalVisible: ({ modal }) => modal.modalVisible
+        })
+    },
+    methods: {
+        ...mapMutations({
+            showModal: 'modal/showModal'
+        })
     }
 };
 </script>

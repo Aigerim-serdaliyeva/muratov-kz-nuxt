@@ -2,7 +2,7 @@
     <div class="header w-full font-roboto z-10 py-5px sm:py-0 fixed">
         <div class="container">
             <div class="w-11/12 mx-auto flex items-center sm:justify-between">
-                <nuxt-link to="/" class="mx-auto">
+                <nuxt-link to="/">
                     <img src="@/assets/img/logo.svg" alt="" />
                 </nuxt-link>
                 <MainMenu class="hidden sm:block" />

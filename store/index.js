@@ -1,11 +1,11 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import { test } from './test';
+// import Vue from 'vue';
+// import Vuex from 'vuex';
+// import { modal } from './modal';
 
-Vue.use(Vuex);
+// Vue.use(Vuex);
 
-export const store = new Vuex.Store({
-    modules: {
-        test
-    }
-});
+// export const store = new Vuex.Store({
+//     modules: {
+//         modal
+//     }
+// });

@@ -34,7 +34,8 @@ export default {
         { src: '~plugins/axios.client.js' },
         { src: '~plugins/object-fit-images.client.js' },
         { src: '~plugins/vue-notification.client.js' },
-        { src: '~plugins/validate.js' }
+        { src: '~plugins/validate.js' },
+        { src: '~plugins/app-global-mixin.client.js' }
     ],
     /*
      ** Nuxt.js dev-modules
