@@ -26,7 +26,10 @@ export default {
     /*
      ** Global CSS
      */
-    css: [],
+    css: [
+        'slick-carousel/slick/slick.css',
+        'slick-carousel/slick/slick-theme.css'
+    ],
     /*
      ** Plugins to load before mounting the App
      */
@@ -35,7 +38,8 @@ export default {
         { src: '~plugins/object-fit-images.client.js' },
         { src: '~plugins/vue-notification.client.js' },
         { src: '~plugins/validate.js' },
-        { src: '~plugins/app-global-mixin.client.js' }
+        { src: '~plugins/app-global-mixin.client.js' },
+        { src: '~plugins/vue-slick.js', mode: 'client' }
     ],
     /*
      ** Nuxt.js dev-modules

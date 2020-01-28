@@ -1,6 +1,6 @@
 <template>
     <div
-        class="about-advantage bg-no-repeat bg-cover w-full h-full text-white bg-center bg-cover"
+        class="about-advantage relative bg-no-repeat bg-cover w-full h-full text-white bg-center bg-cover"
     >
         <div class="container lg:flex">
             <div

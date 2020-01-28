@@ -1,5 +1,17 @@
 <template>
-    <div class="footer bg-footer-back text-white py-10 text-16px md:text-18px">
+    <div
+        class="footer relative bg-footer-back text-white py-10 text-16px md:text-18px"
+    >
+        <div class="wow zoomIn figure-absolute top-14 md:top-21">
+            <img
+                class="mx-auto hidden md:block"
+                src="../../assets/img/figure-white.png"
+            />
+            <img
+                class="mx-auto md:hidden"
+                src="../../assets/img/figure-white-mob.png"
+            />
+        </div>
         <div class="max-w-1140px mx-auto">
             <div class="container">
                 <div class="md:flex mb-5">

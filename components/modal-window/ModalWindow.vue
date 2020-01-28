@@ -23,21 +23,12 @@ export default {
 <style lang="scss" scoped>
 .app-modal {
     &__overlay {
-        background: rgba(#222, 0.5);
-    }
-
-    &__content {
+        background: rgba(#222, 0.6);
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: 40;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__innerContent {
     }
 }
 </style>

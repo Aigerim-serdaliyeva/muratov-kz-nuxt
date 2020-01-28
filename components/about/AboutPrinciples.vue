@@ -1,10 +1,18 @@
 <template>
     <div class="about-princip bg-accent-color text-center py-12">
         <div class="container">
-            <h2 class="font-extrabold uppercase text-2xl mb-16 lg:text-4xl">
+            <h2
+                class="font-extrabold uppercase text-2xl mb-16 lg:text-2xl 2xl:text-4xl"
+            >
                 КОРПОРАТИВНЫЕ ПРИНЦИПЫ РАБОТЫ ЮРИДИЧЕСКОЙ КОМПАНИИ <br />
                 «MURATOV PARTNERS»
             </h2>
+            <div class="wow zoomIn">
+                <img
+                    class="mx-auto mb-30px"
+                    src="../../assets/img/figure-blue.png"
+                />
+            </div>
             <div
                 v-for="princip in principles"
                 :key="princip"
@@ -14,6 +22,12 @@
                     {{ princip.title }}
                 </h3>
                 <p class="text-14px lg:text-18px">{{ princip.text }}</p>
+            </div>
+            <div class="wow zoomIn">
+                <img
+                    class="mx-auto mt-30px"
+                    src="../../assets/img/figure-blue.png"
+                />
             </div>
         </div>
     </div>

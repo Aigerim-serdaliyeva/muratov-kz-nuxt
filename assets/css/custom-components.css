@@ -2,6 +2,10 @@
     @apply h-full w-full;
 }
 
+.figure-absolute {
+  @apply absolute left-1/2 w-full
+}
+
 .main-menu-link {
   @apply text-18px py-10px block text-center mx-auto
 }
@@ -40,7 +44,7 @@
 
 @screen sm {
   .form {
-    @apply pt-80px pb-60px px-70px block h-auto
+    @apply pt-50px pb-40px px-50px block h-auto max-w-620px
   }
 }
 
@@ -50,6 +54,9 @@
   }
   .input {
     @apply text-18px
+  }
+  .input-div {
+    @apply mb-12px
   }
 }
 
@@ -70,6 +77,9 @@
 @screen 2xl {
   .section-right {
     @apply max-w-2xl
+  }
+  .form {
+    @apply pt-80px pb-60px px-70px block h-auto max-w-890px
   }
   .main-menu-link {
       @apply text-18px

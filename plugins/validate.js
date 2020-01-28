@@ -8,12 +8,12 @@ extend("required", {
 
 extend("alpha", {
   ...alpha,
-  message: "This field must only contain alphabetic characters"
+  message: "Это поле должно содержать только буквенные символы"
 });
 
 extend("numeric", {
   ...numeric,
-  message: ''
+  message: 'Проверяемое поле должно состоять только из чисел.'
 })
 
 extend("email", {

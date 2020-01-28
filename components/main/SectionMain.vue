@@ -30,11 +30,6 @@
                 >
                     Получить консультацию
                 </button>
-                <ModalWindow v-if="modalVisible">
-                    <template v-slot:modal>
-                        <Form />
-                    </template>
-                </ModalWindow>
             </div>
         </div>
     </div>
@@ -42,16 +37,10 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex';
-import Form from '../form/Form.vue';
-import ModalWindow from '../modal-window/ModalWindow.vue';
 
 export default {
-    components: { ModalWindow, Form },
-    computed: {
-        ...mapState({
-            modalVisible: ({ modal }) => modal.modalVisible
-        })
-    },
+    components: {},
+
     methods: {
         ...mapMutations({
             showModal: 'modal/showModal'

@@ -9,10 +9,10 @@
             >
                 <img src="@/assets/img/close-modal.svg" alt="" />
             </div>
-            <ValidationObserver v-slot="{ handleSubmit }">
-                <form @submit.prevent="handleSubmit(onSubmit)">
+            <ValidationObserver>
+                <form @submit.prevent="sendMail()">
                     <h3
-                        class="form__title text-20px text-center font-semibold text-3ca6cd mb-50px md:text-24px"
+                        class="form__title text-20px text-center font-semibold text-3ca6cd mb-40px md:mb-30px 2xl:mb-50px md:text-24px"
                     >
                         {{ formTitle }}
                     </h3>
@@ -23,7 +23,7 @@
                         class="input-div"
                     >
                         <input
-                            v-model="company"
+                            v-model="sendData.company"
                             type="text"
                             class="input"
                             placeholder="Наименование компании*"
@@ -37,7 +37,7 @@
                         class="input-div"
                     >
                         <input
-                            v-model="name"
+                            v-model="sendData.name"
                             type="text"
                             class="input"
                             placeholder="Имя*"
@@ -51,7 +51,7 @@
                         class="input-div"
                     >
                         <input
-                            v-model="surname"
+                            v-model="sendData.surname"
                             type="text"
                             class="input"
                             placeholder="Фамилия*"
@@ -65,7 +65,7 @@
                         class="input-div"
                     >
                         <input
-                            v-model="middleName"
+                            v-model="sendData.middleName"
                             type="text"
                             class="input"
                             placeholder="Отчество*"
@@ -79,7 +79,7 @@
                         class="input-div"
                     >
                         <input
-                            v-model="phone"
+                            v-model="sendData.phone"
                             v-mask="'8(###)-###-##-##'"
                             type="tel"
                             class="input"
@@ -94,7 +94,7 @@
                         class="input-div"
                     >
                         <input
-                            v-model="email"
+                            v-model="sendData.email"
                             type="email"
                             class="input"
                             placeholder="Email*"
@@ -103,7 +103,7 @@
                     </ValidationProvider>
 
                     <button
-                        class="button-blue text-white font-medium text-16px text-center mx-auto block py-2 px-10 md:text-22px"
+                        class="button-blue text-white font-medium text-16px text-center mx-auto block py-2 px-10 mt-20px md:text-22px"
                     >
                         Получить
                     </button>
@@ -117,6 +117,7 @@
 import { ValidationProvider, ValidationObserver } from 'vee-validate';
 import { VueMaskDirective } from 'v-mask';
 import { mapMutations } from 'vuex';
+import axios from 'axios';
 
 export default {
     components: {
@@ -128,32 +129,36 @@ export default {
     },
     props: {
         formTitle: {
-            type: String,
-            default: 'Получить консультацию'
+            type: String
         }
     },
     data: () => ({
-        company: '',
-        name: '',
-        surname: '',
-        middleName: '',
-        phone: '',
-        email: '',
+        sendData: {
+            company: '',
+            name: '',
+            surname: '',
+            middleName: '',
+            phone: '',
+            email: ''
+        },
         submitted: false
     }),
     methods: {
-        onSubmit() {
-            alert('Form has been submitted!');
-            this.company = '';
-            this.name = '';
-            this.surname = '';
-            this.middleName = '';
-            this.phone = '';
-            this.email = '';
-        },
         ...mapMutations({
             hideModal: 'modal/hideModal'
-        })
+        }),
+        sendMail() {
+            const options = {
+                method: 'POST',
+                data: this.sendData,
+                url: `./mailer.php`
+            };
+            axios(options)
+                .then(() => {})
+                .catch((err) => {
+                    console.log(err);
+                });
+        }
     }
 };
 </script>

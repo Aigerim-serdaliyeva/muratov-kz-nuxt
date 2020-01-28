@@ -1,12 +1,15 @@
 <template>
     <div class="about-mission">
         <div
-            class="about-mission__title bg-blue-back text-white text-center text-lg py-10 px-2 lg:text-4xl"
+            class="about-mission__title relative bg-blue-back text-white text-center text-lg py-10 px-2 lg:text-4xl"
         >
             <h2 class="max-w-5xl w-full mx-auto">
                 <span class="font-bold">Наша миссия</span> - Обезопасить бизнес
                 Клиента, предоставив качественную юридическую помощь.
             </h2>
+            <div class="wow zoomIn figure-absolute bottom-21 hidden md:block">
+                <img class="mx-auto" src="../../assets/img/figure-white.png" />
+            </div>
         </div>
         <div class="about-mission__content py-12">
             <div class="container">

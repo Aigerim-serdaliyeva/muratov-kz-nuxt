@@ -1,5 +1,8 @@
 <template>
-    <div class="home__commercial bg-blue-back text-white py-16">
+    <div class="home__commercial relative bg-blue-back text-white py-16">
+        <div class="wow zoomIn figure-absolute top-21 hidden md:block">
+            <img class="mx-auto" src="../../assets/img/figure-white.png" />
+        </div>
         <div class="container">
             <div class="max-w-1280px mx-auto">
                 <h2
@@ -26,24 +29,21 @@
                 </ul>
                 <button
                     class="button-blue font-medium text-16px text-center mx-auto block py-3 px-15px sm:text-22px"
-                    @click="showModal"
+                    @click="
+                        showModalChangeFormTitle(
+                            'Получить коммерческое предложение'
+                        )
+                    "
                 >
                     Получить коммерческое предложение
                 </button>
-                <ModalWindow v-if="modalVisible">
-                    <template v-slot:modal>
-                        <Form
-                            form-title="Получить коммерческое предложение"
-                        ></Form>
-                    </template>
-                </ModalWindow>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapActions } from 'vuex';
 import ModalWindow from '../modal-window/ModalWindow.vue';
 export default {
     components: { ModalWindow },
@@ -56,14 +56,9 @@ export default {
             ]
         };
     },
-    computed: {
-        ...mapState({
-            modalVisible: ({ modal }) => modal.modalVisible
-        })
-    },
     methods: {
-        ...mapMutations({
-            showModal: 'modal/showModal'
+        ...mapActions({
+            showModalChangeFormTitle: 'modal/showModalChangeFormTitle'
         })
     }
 };

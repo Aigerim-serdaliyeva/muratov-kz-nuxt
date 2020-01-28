@@ -1,6 +1,6 @@
 <template>
     <div
-        class="home__minus w-full bg-blue-back text-white bg-center py-12 font-open-sans text-center md:text-left"
+        class="home__minus relative w-full bg-blue-back text-white bg-center py-12 font-open-sans text-center md:text-left"
     >
         <div class="container">
             <div class="max-w-1070px mx-auto">
@@ -23,6 +23,10 @@
                     </li>
                 </ul>
             </div>
+        </div>
+
+        <div class="wow zoomIn figure-absolute hidden md:block md:bottom-21">
+            <img class="mx-auto" src="../../assets/img/figure-white.png" />
         </div>
     </div>
 </template>
