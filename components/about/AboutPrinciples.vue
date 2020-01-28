@@ -14,8 +14,8 @@
                 />
             </div>
             <div
-                v-for="princip in principles"
-                :key="princip"
+                v-for="(princip, index) in principles"
+                :key="index"
                 class="princip mb-10 max-w-1140px mx-auto wow zoomIn"
             >
                 <h3 class="font-extrabold text-18px lg:text-20px mb-3">

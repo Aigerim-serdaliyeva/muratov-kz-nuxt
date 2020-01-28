@@ -20,7 +20,7 @@
                     </h2>
                 </div>
                 <div
-                    class="main__text font-normal text-16px mb-8 lg:text-24px 2xl:text-28px lg:mb-32"
+                    class="main__text font-normal text-16px mb-8 lg:text-24px 2xl:text-28px lg:mb-24"
                 >
                     Защита вашего бизнеса – наш приоритет!
                 </div>
@@ -36,11 +36,10 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapMutations } from 'vuex';
 
 export default {
     components: {},
-
     methods: {
         ...mapMutations({
             showModal: 'modal/showModal'

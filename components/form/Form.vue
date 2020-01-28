@@ -102,6 +102,13 @@
                         <span class="input-required">{{ errors[0] }}</span>
                     </ValidationProvider>
 
+                    <div class="wow zoomIn mt-30px w-full">
+                        <img
+                            class="mx-auto mb-30px  md:block"
+                            src="../../assets/img/figure-form.png"
+                        />
+                    </div>
+
                     <button
                         class="button-blue text-white font-medium text-16px text-center mx-auto block py-2 px-10 mt-20px md:text-22px"
                     >

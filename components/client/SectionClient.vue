@@ -7,20 +7,17 @@
                 class="clients-slider"
             >
                 <img
+                    class="mx-auto"
                     :src="
                         require(`@/assets/img/clients/client-${index + 1}.png`)
                     "
                 />
             </div>
         </slick>
-        <div class="wow zoomIn mt-60px">
+        <div class="wow zoomIn mt-60px w-full">
             <img
-                class="mx-auto mb-30px hidden md:block"
+                class="mx-auto mb-30px  md:block"
                 src="../../assets/img/figure-blue.png"
-            />
-            <img
-                class="mx-auto mb-30px md:hidden"
-                src="../../assets/img/figure-blue-mob.png"
             />
         </div>
     </div>
@@ -36,6 +33,8 @@ export default {
                 slidesToShow: 5,
                 dots: true,
                 autoplay: true,
+                infinite: true,
+                // centerMode: true,
                 responsive: [
                     {
                         breakpoint: 960,
